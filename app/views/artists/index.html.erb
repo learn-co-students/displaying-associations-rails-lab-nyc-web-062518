@@ -1,0 +1,8 @@
+<% @artists.each do |artist| %>
+  Artist Name: <%= link_to artist.name, artist_path(artist) %>
+  Number of Songs: <%= pluralize(artist.song_count, 'song') %>
+  <% artist.songs.each do |song| %>
+    Songs: <%= link_to song.title, song_path(song) %>
+  <% end %>
+  <br>
+<% end %>
