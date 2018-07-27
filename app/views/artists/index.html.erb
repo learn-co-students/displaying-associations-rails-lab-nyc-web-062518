@@ -1,0 +1,8 @@
+<h1>Artist Index Page</h1>
+<% @artists.each do |artist| %>
+  <%= artist.name %>
+  <% artist.songs.each do |song| %>
+    <%= song.title %>
+  <% end %>
+  <div><%= artist.song_count %> songs</div>
+<% end %>
